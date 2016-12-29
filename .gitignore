@@ -4,6 +4,7 @@ es6/
 js/
 lib/
 types/
+dist/
 
 # Logs
 logs

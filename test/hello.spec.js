@@ -6,6 +6,6 @@ import path from 'path'
 describe(`Test func hello`, () => {
   it('Should return string', () => {
     const result = hello('Smart')
-    expect(result).to.be.string()
+    expect(typeof result).to.equal('string')
   })
 })
