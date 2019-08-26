@@ -5,10 +5,14 @@
   "main": "lib/index.js",
   "types": "./types/index.d.ts",
   "scripts": {
-    "test": "jest",
-    "coverage": "jest --collect-coverage",
     "build": "tsc",
-    "clean": "rimraf lib"
+    "clean": "rimraf lib",
+    "test": "jest",
+    "test:coverage": "jest --collect-coverage",
+    "test:debug": "node --inspect-brk -r ts-node/register node_modules/.bin/jest --runInBand",
+    "test:debug:win": "node --inspect-brk -r ts-node/register ./node_modules/jest/bin/jest.js --runInBand",
+    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,md,css,scss}\"",
+    "lint": "echo TODO"
   },
   "repository": {
     "type": "git",
@@ -27,6 +31,7 @@
     "jest": "^24.8.0",
     "rimraf": "^3.0.0",
     "ts-jest": "^24.0.2",
+    "ts-node": "^8.3.0",
     "typescript": "^3.5.3"
   }
 }
