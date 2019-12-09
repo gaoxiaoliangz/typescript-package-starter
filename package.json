@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "Package description here",
   "main": "lib/index.js",
-  "types": "./types/index.d.ts",
+  "types": "./lib/index.d.ts",
   "scripts": {
     "build": "tsc",
     "clean": "rimraf lib",
