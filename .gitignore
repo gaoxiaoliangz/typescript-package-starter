@@ -1,9 +1,6 @@
 # Directory for built files
-es/
-es6/
-js/
-lib/
-types/
+esm/
+cjs/
 dist/
 
 # Logs
