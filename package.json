@@ -6,9 +6,9 @@
   "scripts": {
     "prebuild": "yarn clean",
     "build": "yarn build:cjs && yarn build:esm",
-    "watch": "yarn build:cjs --watch --incremental & yarn build:esm --watch --incremental",
-    "build:cjs": "tsc",
-    "build:esm": "tsc --outDir esm --module esnext",
+    "watch": "yarn build:cjs --watch --incremental & yarn build:esm --watch",
+    "build:cjs": "tsc --outDir cjs --module commonjs",
+    "build:esm": "rollup -c",
     "clean": "rimraf cjs esm",
     "test": "jest",
     "test:coverage": "jest --collect-coverage",
@@ -29,12 +29,19 @@
   },
   "homepage": "https://github.com/username/package-name#readme",
   "devDependencies": {
+    "@rollup/plugin-commonjs": "20.0.0",
+    "@rollup/plugin-json": "4.1.0",
+    "@rollup/plugin-node-resolve": "13.0.4",
+    "@rollup/plugin-typescript": "8.2.5",
     "@types/jest": "^27.0.1",
-    "@types/node": "^16.7.6",
-    "jest": "27.1.0",
+    "@types/node": "^16.9.1",
+    "jest": "27.1.1",
     "rimraf": "^3.0.2",
+    "rollup": "2.56.3",
+    "rollup-plugin-uglify": "6.0.4",
     "standard-version": "^9.3.1",
     "ts-jest": "27.0.5",
-    "typescript": "^4.4.2"
+    "tslib": "2.3.1",
+    "typescript": "4.3.5"
   }
 }

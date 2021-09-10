@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es2015",
     "lib": [
       "es6",
       "dom",
@@ -9,11 +9,10 @@
       "jest",
       "node",
     ],
-    "module": "CommonJS",
+    "module": "es2015",
     "moduleResolution": "node",
     "experimentalDecorators": false,
     "emitDecoratorMetadata": false,
-    "outDir": "cjs",
     "sourceMap": true,
     "declaration": true,
     "allowJs": false,
@@ -21,7 +20,10 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "strict": true,
-    "preserveWatchOutput": true
+    "preserveWatchOutput": true,
+    "incremental": true,
+    // https://github.com/rollup/plugins/issues/287#issuecomment-611368317
+    // no outDir, declarationDir or declaration
   },
   "include": [
     "src"
